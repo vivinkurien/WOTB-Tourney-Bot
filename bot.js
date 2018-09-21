@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-//const client = new Discord.Client();
+const client = new Discord.Client();
 var BOT_TOKEN = process.env.BOT_TOKEN; 
 
 client.on("ready", () => {
