@@ -1,6 +1,11 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+//const client = new Discord.Client();
 var BOT_TOKEN = (process.env.BOT_TOKEN); 
+
+var client = new Discord.Client({
+   token: BOT_TOKEN,
+   autorun: true
+});
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
@@ -31,4 +36,4 @@ client.on("message", async message => {
  
 });
 
-client.login(BOT_TOKEN);
+//client.login(BOT_TOKEN);
