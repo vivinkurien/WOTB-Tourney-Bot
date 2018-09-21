@@ -31,4 +31,6 @@ client.on("message", async message => {
  
 });
 
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
+  .then(console.log('logged in'))
+.catch(console.error);
