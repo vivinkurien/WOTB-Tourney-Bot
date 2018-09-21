@@ -1,1 +1,2 @@
-console.log('here');
+
+console.log(process.env.BOT_TOKEN); 	 	
