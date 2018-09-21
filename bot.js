@@ -50,7 +50,7 @@ function getDate(utcSeconds){
 }
 
 
-bot.msgs=require('./msgs.json');
+//bot.msgs=require('./msgs.json');
 
 bot.on('ready', function (evt) {
     logger.info('Connected');
