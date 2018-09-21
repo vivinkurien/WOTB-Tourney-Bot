@@ -2,11 +2,6 @@ const Discord = require("discord.js");
 //const client = new Discord.Client();
 var BOT_TOKEN = (process.env.BOT_TOKEN); 
 
-var client = new Discord.Client({
-   token: BOT_TOKEN,
-   autorun: true
-});
-
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
@@ -36,4 +31,6 @@ client.on("message", async message => {
  
 });
 
-//client.login(BOT_TOKEN);
+client.login(BOT_TOKEN)
+.then(console.log)
+ .catch(console.error);
