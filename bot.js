@@ -1,16 +1,12 @@
 
 var Discord = require('discord.io');
 var logger = require('winston');
-var auth = require('./auth.json');
+//var auth = require('./auth.json');
 var http = require("http");
-//var BOT_TOKEN = 'd911af02a46169608ec3e9e6bc500db1';
 const request = require('request-promise-lite');
 const async = require('async');
 var BOT_TOKEN = (process.env.BOT_TOKEN); 	 	
 const fs = require('fs');
-
-
-
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -20,7 +16,7 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
-   token: auth.token,
+   token: BOT_TOKEN,
    autorun: true
 });
 
