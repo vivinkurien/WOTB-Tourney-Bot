@@ -31,6 +31,4 @@ client.on("message", async message => {
  
 });
 
-client.login(BOT_TOKEN)
-.then(console.log)
- .catch(console.error);
+client.login(BOT_TOKEN);
